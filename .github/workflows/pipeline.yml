@@ -23,7 +23,8 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm run start-prod
-          # command: npm run test:e2e
-          # wait-on-timeout: 120
+          command: npm run test:e2e
+          browser: chrome
+          wait-on-timeout: 120
           # browser: chrome
           # headless: true
