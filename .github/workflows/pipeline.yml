@@ -17,13 +17,15 @@ jobs:
         run: npm install
       - name: lint
         run: npm run eslint
+      - name: build
+        run: npm run build
       - name: test
         run: npm run test
       - name: e2e tests
         uses: cypress-io/github-action@v2
         with:
-          start: npm start
-          wait-on: "http://localhost:8000"
+          start: npm run start-prod
+          wait-on: "http://localhost:5000"
 
           # browser: chrome
           # headless: true
